@@ -27,6 +27,10 @@ body {
     flex: 1;
 }
 
+.pixel:hover {
+    background-color: blue;
+}
+
 .pixel {
     border: 1px solid #eee;
     padding: 0px;
