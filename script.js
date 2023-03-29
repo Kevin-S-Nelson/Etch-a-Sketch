@@ -10,7 +10,6 @@ function createGrid() {
         for (let j = 0; j < gridSize; j++) {
             const pixel = document.createElement('div');
             pixel.classList.add('pixel');
-            pixel.textContent = " ";
             column.appendChild(pixel);
         }   
     }
