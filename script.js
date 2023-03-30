@@ -1,5 +1,7 @@
 const container = document.querySelector('.container');
 
+const startingPixelSize = 5;
+const startingGridSize = 16;
 let gridSize = 16;
 
 function createGrid() {
@@ -10,6 +12,9 @@ function createGrid() {
         for (let j = 0; j < gridSize; j++) {
             const pixel = document.createElement('div');
             pixel.classList.add('pixel');
+            let pixelSize = startingPixelSize * (startingGridSize/gridSize);
+            pixel.style.height = pixelSize + "vmin";
+            pixel.style.width = pixelSize + "vmin";
             column.appendChild(pixel);
         }   
     }
@@ -23,7 +28,7 @@ function removeGrid() {
 
 function changeGridSize() {
     removeGrid();
-    gridSize = 32;
+    gridSize = 100;
     console.log("girdSize = " + gridSize);
     createGrid();
 }

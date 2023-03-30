@@ -23,7 +23,7 @@ button {
     background-color: green;
     font-size: 16px;
     margin: auto;
-    margin-top: 32px;
+    /* margin-top: 32px; */
     height: 25px;
     width: 150px;
     cursor: pointer;
@@ -34,15 +34,6 @@ button:hover {
     color: white;
 }
 
-/* .container {
-    display: grid;
-    grid-template-columns: min-content;
-    justify-content: center;
-    align-items: center;
-    width: 700px;
-    height: 700px;
-} */
-
 .container {
     padding: 32px;
     display: flex;
@@ -52,11 +43,9 @@ button:hover {
 }
 
 .pixel {
-    border: 1px solid #eee;
+    background-color: #eee;
     padding: 0px;
     margin: 0px;
-    height: 20px;
-    width: 20px;
 }
 
 .pixel:hover {
