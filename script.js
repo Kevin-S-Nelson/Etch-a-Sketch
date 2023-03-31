@@ -1,5 +1,4 @@
 const container = document.querySelector('.container');
-
 const startingPixelSize = 5;
 const startingGridSize = 16;
 let gridSize = 16;
@@ -16,19 +15,29 @@ function createGrid() {
             pixel.style.height = pixelSize + "vmin";
             pixel.style.width = pixelSize + "vmin";
             column.appendChild(pixel);
+            pixel.addEventListener("mousemove", addColor);
+            function addColor() {
+                pixel.style.backgroundColor = "#000000";
+            }
         }   
     }
 }
 
-createGrid();
+function changeGridSize() {
+    removeGrid();
+    const userInput = prompt("Please enter a number between 1 and 100:")
+    if (userInput < 1) {
+        gridSize = 1;
+    } else if (userInput > 100) {
+        gridSize = 100;
+    } else {
+        gridSize = userInput;
+    }
+    createGrid();
+}
 
 function removeGrid() {
     container.innerHTML = "";
 }
 
-function changeGridSize() {
-    removeGrid();
-    gridSize = 100;
-    console.log("girdSize = " + gridSize);
-    createGrid();
-}
+createGrid();
